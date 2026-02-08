@@ -33,12 +33,12 @@
         0 0 5px rgba(255, 255, 255, 0.3),
         0 0 10px rgba(255, 255, 255, 0.2),
         0 0 15px rgba(255, 255, 255, 0.1);
-      animation: typewriter 2s steps(20, end);
       white-space: nowrap;
       overflow: hidden;
-      border-right: 3px solid;
-      width: fit-content;
+      border-right: 3px solid rgba(255, 255, 255, 0.8);
+      width: 0;
       margin: 0 auto;
+      animation: typewriter 3s steps(17, end) forwards, blink 0.75s step-end infinite;
     }
 
     @keyframes typewriter {
@@ -46,7 +46,7 @@
         width: 0;
       }
       to {
-        width: fit-content;
+        width: 17ch; /* 17 characters in "The Lost Ceremony" */
       }
     }
 
@@ -54,10 +54,6 @@
       50% {
         border-color: transparent;
       }
-    }
-
-    .band-name {
-      animation: typewriter 2s steps(20, end), blink 0.75s step-end infinite;
     }
 
     /* Remove cursor after animation */
@@ -74,7 +70,7 @@
     // Remove the cursor after the typewriter animation finishes
     setTimeout(() => {
       document.querySelector('.band-name').classList.add('finished');
-    }, 2000);
+    }, 3000);
   </script>
 </body>
 </html>
