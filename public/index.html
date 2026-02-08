@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lost Ceremony</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000000;
+      color: #ffffff;
+      font-family: 'Special Elite', cursive;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .band-name {
+      font-size: clamp(2rem, 8vw, 6rem);
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.3),
+        0 0 10px rgba(255, 255, 255, 0.2),
+        0 0 15px rgba(255, 255, 255, 0.1);
+      animation: typewriter 2s steps(20, end);
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: fit-content;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .band-name {
+      animation: typewriter 2s steps(20, end), blink 0.75s step-end infinite;
+    }
+
+    /* Remove cursor after animation */
+    .band-name.finished {
+      border-right: none;
+      animation: none;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="band-name">The Lost Ceremony</h1>
+
+  <script>
+    // Remove the cursor after the typewriter animation finishes
+    setTimeout(() => {
+      document.querySelector('.band-name').classList.add('finished');
+    }, 2000);
+  </script>
+</body>
+</html>
