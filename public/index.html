@@ -26,7 +26,7 @@
     }
 
     .band-name {
-      font-size: clamp(2rem, 8vw, 6rem);
+      font-size: clamp(1.5rem, 6vw, 4rem);
       text-align: center;
       letter-spacing: 0.1em;
       text-shadow: 
@@ -56,10 +56,11 @@
       }
     }
 
-    /* Remove cursor after animation */
+    /* Remove cursor after animation but keep text visible */
     .band-name.finished {
       border-right: none;
       animation: none;
+      width: 17ch; /* Ensure text stays visible */
     }
   </style>
 </head>
