@@ -7,8 +7,8 @@ const PORT = 3004;
 // Serve static files from public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Serve index.html for all routes
-app.get('*', (req, res) => {
+// Root route
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
