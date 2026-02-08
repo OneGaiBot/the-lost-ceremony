@@ -46,7 +46,7 @@
         width: 0;
       }
       to {
-        width: 17ch; /* 17 characters in "The Lost Ceremony" */
+        width: 19ch; /* Account for letter-spacing in "The Lost Ceremony" */
       }
     }
 
@@ -60,7 +60,7 @@
     .band-name.finished {
       border-right: none;
       animation: none;
-      width: 17ch; /* Ensure text stays visible */
+      width: max-content; /* Use max-content to ensure full text is visible */
     }
   </style>
 </head>
